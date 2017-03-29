@@ -23,10 +23,18 @@ nav
     margin-right:-10px;
     width: 100%;
     float: none;
-
     border-top: solid 1px #292929;
     border-bottom: solid 1px #292929;
 
+}
+.sticky {
+    background-color:#111111;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    border-top: 0;
 }
 nav ul {
     list-style-type: none;
@@ -63,6 +71,7 @@ nav li a {
 nav li a:hover:not(.active) {
     color: #EDB83A;
 }
+
 .Navdot {
     height: 7px;
     width: 7px;
@@ -235,8 +244,6 @@ body {font-family: Verdana,sans-serif;}
     color: #333;
     font-family: "Cinzel";
     text-align: center;
-
-
 }
 .whitetext2{
     font-size: 32px;
@@ -378,17 +385,6 @@ p{
     float: left;
 
 }
-.container2 {
-    position: relative;
-    width: 385px;
-
-    float: left;
-}
-.container3 {
-    position: relative;
-    width: 385px;
-    float: left;
-}
 
 .image {
 
@@ -411,12 +407,7 @@ p{
 .container:hover .overlay {
     height: 100%;
 }
-.container2:hover .overlay {
-     height: 100%;
- }
-.container3:hover .overlay {
-    height: 100%;
-}
+
 
 .phototext h3 {
     white-space: nowrap;
@@ -457,6 +448,127 @@ p{
     font-weight: lighter;
     text-align: center;
     overflow: hidden;
+}
+
+/*-------------------------------------- Rooms Page Containers -----------------------------------*/
+
+#room-content{
+    background-color: white;
+    height: 1600px;
+    width: 100%;
+}
+
+#content {
+    width: 1170px;
+    margin-left: 85px;
+    margin-top: 70px;
+}
+
+.roomcontainer {
+    position: relative;
+    width: 48%;
+    float: left;
+    margin-top: 60px;
+
+}
+.roomcontainer2 {
+    position: relative;
+    width: 48%;
+    margin-left: 4%;
+    float: left;
+    margin-top: 60px;
+}
+
+.image {
+    width: 100%;
+    height: auto;
+}
+
+.room-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #EDB83A;
+    overflow: hidden;
+    width: 100%;
+    height: 20%;
+    transition: .5s ease;
+}
+
+.roomcontainer:hover .room-overlay, .roomcontainer2:hover .room-overlay {
+    height: 100%;
+}
+
+
+.room-desc a {
+    white-space: nowrap;
+    font-weight: lighter;
+    color: #333;
+    text-decoration: none;
+    font-family: "Cinzel";
+    text-transform: uppercase;
+    padding: 0;
+    margin-top: 20px;
+    font-size: 18px;
+    letter-spacing: 3px;
+    position: absolute;
+    overflow: hidden;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+.room-desc a:hover{
+    text-decoration: underline;
+}
+.room-desc p{
+    color: #333;
+   text-align: center;
+    margin-top: 140px;
+    margin-left: 60px;
+    margin-right: 60px;
+    overflow: hidden;
+}
+.room-desc h2 {
+    font-size: 32px;
+    color: #333;
+    font-family: "Cinzel";
+    margin: 30px 0;
+    text-align: center;
+}
+.room-desc span{
+    font-size: 15px;
+    color: #333;
+    font-family: "Cinzel";
+    font-weight: lighter;
+    text-align: center;
+    overflow: hidden;
+}
+.roomcontainer:hover .overlay , .roomcontainer2:hover .overlay {
+    height: 100%;
+}
+
+.RoomDetails {
+    background-color: white;
+    color: black;
+    border: 2px solid #333;
+    border: none;
+    font-family: "Cinzel";
+    padding: 16px 42px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 197px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.RoomDetails:hover {
+    background-color: #333;
+    color: white;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
 /*-------------------------------------- scroll button -----------------------------------*/

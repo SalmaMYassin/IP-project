@@ -25,12 +25,14 @@ function showSlides() {
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    if (document.body.scrollTop > 20 ) {
         document.getElementById("myBtn").style.display = "block";
     } else {
         document.getElementById("myBtn").style.display = "none";
     }
 }
+
+
 
 // When the user clicks on the button, scroll to the top of the document
 
@@ -40,6 +42,26 @@ $(document).ready(function() {
         return false;
     });
 
+});
+
+$(document).ready(function() {
+  var stickyNavTop = $('nav').offset().top;
+
+  var stickyNav = function(){
+    var scrollTop = $(window).scrollTop();
+
+    if (scrollTop > stickyNavTop) { 
+      $('nav').addClass('sticky');
+    } else {
+      $('nav').removeClass('sticky'); 
+    }
+  };
+
+  stickyNav();
+
+  $(window).scroll(function() {
+    stickyNav();
+  });
 });
 
 /*---------------------------------------------  dropdown  -------------------------------------------*/
