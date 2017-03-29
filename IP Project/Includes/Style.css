@@ -27,6 +27,7 @@ nav
     border-bottom: solid 1px #292929;
 
 }
+
 .sticky {
     background-color:#111111;
     position: fixed;
@@ -36,6 +37,7 @@ nav
     z-index: 100;
     border-top: 0;
 }
+
 nav ul {
     list-style-type: none;
     padding: 0;
@@ -409,9 +411,10 @@ p{
 }
 
 
-.phototext h3 {
+.phototext a {
     white-space: nowrap;
     font-weight: lighter;
+    text-decoration: none;
     color: #333;
     font-family: "Cinzel";
     text-transform: uppercase;
@@ -425,6 +428,10 @@ p{
     left: 50%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
+}
+
+.phototext a:hover{
+    text-decoration: underline;
 }
 .phototext p{
     color: #333;
@@ -449,6 +456,91 @@ p{
     text-align: center;
     overflow: hidden;
 }
+
+
+/*-------------------------------------- Gallery -----------------------------------*/
+
+.white{
+    background-color: white;
+    height: 1200px;
+    width: 100%;
+}
+.Gcontainer {
+    position: relative;
+    margin-top: 50px;
+    width: 385px;
+    height: 300px;
+    margin-left: 50px;
+    float: left;
+}
+
+.Goverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #FFF;
+    background: rgba(0, 0, 0, 0);
+    transition: background 0.5s ease;
+}
+
+.Gcontainer:hover .Goverlay {
+    display: block;
+    background: rgba(0, 0, 0,0.7);
+}
+
+
+.Gimg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+}
+
+.Gtitle {
+    position: absolute;
+    width: 100%;
+    left: -98px;
+    top: 20px;
+    font-weight: 700;
+    font-size: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    color: sandybrown;
+    z-index: 1;
+    transition: top .5s ease;
+}
+
+.Gcontainer:hover .Gtitle {
+    top: 90px;
+}
+
+.Gbutton {
+    position: absolute;
+    width: 100%;
+    left:0;
+    top: 180px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity .35s ease;
+}
+
+.Gbutton a {
+
+    width: 100%;
+    padding: 12px 48px;
+    text-align: center;
+    color: wheat;
+    border: solid 2px white;
+    z-index: 1;
+}
+
+.Gcontainer:hover .Gbutton {
+    opacity: 1;
+}
+
+
 
 /*-------------------------------------- Rooms Page Containers -----------------------------------*/
 
@@ -569,6 +661,112 @@ p{
     background-color: #333;
     color: white;
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+
+
+}
+/*-------------------------------------- Rooms Pages -----------------------------------*/
+
+.room-header-text {
+    margin-top: 20px;
+    position: absolute;
+    font-family: "Merriweather";
+    width: 100%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    top: 30%;
+    font-size: 72px;
+    font-weight: 400;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    color: #fff;
+    display: inline-block;
+    padding: 10px 20px;
+ }
+.room-header-text2 {
+     color: #edb83a;
+     text-transform: uppercase;
+     letter-spacing: 20px;
+     margin-top: 20px;
+     font-size: 20px;
+     padding: 8px 12px;
+     position: absolute;
+     font-family: "Merriweather";
+     width: 100%;
+     text-align: center;
+     white-space: nowrap;
+     overflow: hidden;
+     top: 50%;
+}
+
+.ManualSlider{
+    margin-top: 10%;
+    margin-left: -40px;
+    width:70%;
+    height: 70%;
+    overflow: hidden;
+    transition-duration: 1.2s;
+}
+
+.desc-part{
+    background: #eee;
+    margin-top: -50%;
+    margin-left: 68%;
+    width: 32%;
+    height: 650px;
+}
+.desc-title{
+    white-space: nowrap;
+    font-weight: 500;
+    color: #333;
+    font-family: "Merriweather";
+    margin-left: 50px;
+    padding: 0;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-size: 18px;
+
+    position: absolute;
+    overflow: hidden;
+
+}
+.desc{
+    padding-top: 90px;
+    margin-left: 50px;
+    padding-right: 50px; 
+    overflow: hidden;
+
+}
+.desc-part ul{
+    margin-top: 70px;
+    list-style-image: url("file:///D:/GitHub/IP-project/IP%20Project/Images/check-bullet.png");
+}
+.desc-part li{
+    font-size: 15px;
+    margin-left: 45px;
+    padding-bottom: 20px;
+    font-family:Arial;
+}
+.desc-part span{
+    font-size: 15px;
+    color: #333;
+    font-family: "Cinzel";
+    font-weight: lighter;
+    text-align: center;
+    overflow: hidden;
+}
+.desc-part h2 {
+    font-size: 22px;
+    color: #333;
+    font-family: "Cinzel";
+    margin: 10px 0;
+    margin-left: -45%;
+   margin-bottom: 35px;
+    text-align: center;
+}
+
+#suggestions{
+    margin-top: 80px;
 }
 
 /*-------------------------------------- scroll button -----------------------------------*/

@@ -3,7 +3,7 @@
  */
 
 
-/*Slider*/
+/*Automatic Slideshow*/
 var slideIndex = 0;
 window.addEventListener("load",showSlides,true);
 
@@ -19,6 +19,8 @@ function showSlides() {
     slides[slideIndex-1].style.display = "block";
     setTimeout(showSlides, 5000); // Change image every 5 seconds
 }
+
+/*Manual Slideshow*/
 
 //----------------------------------------------------------------------------------------------------------------//
 // When the user scrolls down 20px from the top of the document, show the button
@@ -43,6 +45,7 @@ $(document).ready(function() {
     });
 
 });
+
 
 $(document).ready(function() {
   var stickyNavTop = $('nav').offset().top;
