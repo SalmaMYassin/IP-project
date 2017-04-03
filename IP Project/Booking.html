@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoteliano</title>
+    <link rel="icon" type="image/png" href="Images/Favicon.png">
+    <link rel="stylesheet"href="Includes/Style.css">
+    <script src="Includes/jquery-3.1.1.min.js"></script>
+    <script src="Includes/script.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+    <div id="Logo">
+        <img src="Images/Logo.png" id="LogoCenter">
+
+    </div>
+</head>
+<body>
+
+<img src="Images/arrow2.png"  id="myBtn">
+<nav id="navbar-frame"></nav>
+
+<!-- ---------------------------------------------  Slider  --------------------------------------------->
+
+<div class="slideshow-container" id="slide">
+
+        <img src="Images/booking.jpg" style="width:100%">
+        <div class="text">Make Your Reservation</div>
+        <div class="text2">BOOKING</div>
+
+
+
+</div>
+<!-- ------------------------------------page division-------------------------------------*-->
+<div class="Booking">
+    <div id="formside">
+    <form action="#" method="post" name="a">
+          <div>
+            <label>Name:</label>
+            <input type="text" name="in1" id="name" name="user_name" required>
+          </div>
+
+          <div>
+            <label>E-mail:</label>
+            <input type="" name="in2" id="email" name="user_email" required>
+          </div>
+          <div>
+
+        <label> &nbsp; &nbsp; &nbsp; &nbsp;Check In Date:</label>
+            <input type="date" name="in3" name="arrival" required>
+          </div>
+
+        <div>
+            <br>
+            <label> &nbsp; &nbsp; &nbsp; &nbsp;Check Out Date:</label>
+            <input type="date" name="in4" name="departure" required>
+        </div>
+        <div name="in5">
+            <br><label >  &nbsp; &nbsp; &nbsp;  &nbsp;Number of Guests:</label>
+            <select>
+
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+
+            </select>
+        </div>
+        <div name="in6">
+            <br><label> &nbsp; &nbsp; &nbsp;  &nbsp;Room Type:</label>
+        <select >
+
+            <option value="Deluxe Room">Deluxe Room</option>
+            <option value="Luxury Room">Luxury Room</option>
+            <option value="Premier Room">Premier Room</option>
+            <option value="Deluxe Room">Deluxe Suite</option>
+            <option value="Luxury Room">Luxury Suite</option>
+            <option value="Premier Room">Premier Suite</option>
+        </select>
+            </div>
+          <div name="in7">
+            <label>Message:</label>
+            <textarea id="msg" name="user_message" ></textarea>
+          </div>
+
+          <div class="button">
+            <button class="submit" onclick="validateForm(); JSON();" type="submit">Book</button>
+          </div>
+    </form>
+
+    </div>
+
+    <div id="Map">
+        <div class="background">
+           <br>
+        <h3> Our Address </h3>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d41993.796792027024!2d2.3178572920376226!3d48.86560300621649!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3dfd529898c4bb0!2sour+hotel!5e0!3m2!1sen!2seg!4v1490807119780"  frameborder="0" style="border:0" allowfullscreen></iframe>
+        <h4> Hoteliano</h4>
+        <span class="footerspan"> 20 Main Street, Melbourne</span ><br>
+        <span class="footerspan"> Phone:(200) 333 8890</span><br>
+        <span class="footerspan"> Fax:(200) 333 8892</span><br>
+        <span class="footerspan"> Email: <a style="color: #edb83a;" href="#"> example@mail.com</a></span><br>
+        <span class="footerspan"> Web: <a style="color: #edb83a;" href="#"> example.com</a></span><br>
+        </div>
+    </div>
+</div>
+
+<!-- ------------------------------------Footer-------------------------------------*-->
+
+<div id="Footer-frame"></div>
+
+
+
+
+</body>
+</html>

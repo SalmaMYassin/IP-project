@@ -41,7 +41,6 @@ nav
 nav ul {
     list-style-type: none;
     padding: 0;
-    overflow: hidden;
     background-color: #111111;
     text-align: center;
     margin-bottom: 20px;
@@ -86,11 +85,42 @@ nav li a:hover:not(.active) {
 
 
 
-/*---------------------------------------------  audio  -------------------------------------------*/
+/*---------------------------------------------  Dropdown menu  -------------------------------------------*/
 
 
-audio{
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+
+.dropdown-content {
     display: none;
+    position: absolute;
+    background-color: #2D2C2C;
+    margin-top: 8px;
+
+    width: 200px;
+    z-index: 1;
+
+}
+
+
+.dropdown-content a {
+    color: #f3fff2;
+    text-decoration: wavy;
+    display: block;
+}
+
+
+.dropdown-content a:hover {
+    background-color: #000000
+}
+
+
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 
 
@@ -234,8 +264,9 @@ body {font-family: Verdana,sans-serif;}
 /*------------------------------------white section-------------------------------------*/
 #white{
     background-color: white;
-    height: 1080px;
+    height: 1100px;
     width: 100%;
+    margin-top: -20px;
 }
 .whitetext{
     font-size: 32px;
@@ -279,7 +310,7 @@ body {font-family: Verdana,sans-serif;}
 /*------------------------------------grey section-------------------------------------*/
 .grey{
     background-color: #222;
-
+    margin-top: -20px;
     height: 442px;
 }
 .left{
@@ -358,7 +389,7 @@ body {font-family: Verdana,sans-serif;}
 hr {
     border: none;
     height: 80px;
-    background: url(divider-1.png) center no-repeat;
+    background: url(../Images/divider-1.png) center no-repeat;
     clear: both;
 }
 
@@ -386,6 +417,7 @@ p{
     width: 385px;
     float: left;
 
+
 }
 
 .image {
@@ -402,14 +434,16 @@ p{
     background-color: #EDB83A;
     overflow: hidden;
     width: 100%;
-    height: 0;
+    height: 30%;
     transition: .5s ease;
 }
 
 .container:hover .overlay {
     height: 100%;
 }
-
+.container:hover .phototext a {
+    top: 20%;
+}
 
 .phototext a {
     white-space: nowrap;
@@ -424,13 +458,14 @@ p{
     letter-spacing: 3px;
     position: absolute;
     overflow: hidden;
-    top: 20%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
 }
 
 .phototext a:hover{
+
     text-decoration: underline;
 }
 .phototext p{
@@ -457,97 +492,13 @@ p{
     overflow: hidden;
 }
 
-
-/*-------------------------------------- Gallery -----------------------------------*/
-
-.white{
-    background-color: white;
-    height: 1200px;
-    width: 100%;
-}
-.Gcontainer {
-    position: relative;
-    margin-top: 50px;
-    width: 385px;
-    height: 300px;
-    margin-left: 50px;
-    float: left;
-}
-
-.Goverlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    color: #FFF;
-    background: rgba(0, 0, 0, 0);
-    transition: background 0.5s ease;
-}
-
-.Gcontainer:hover .Goverlay {
-    display: block;
-    background: rgba(0, 0, 0,0.7);
-}
-
-
-.Gimg {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-}
-
-.Gtitle {
-    position: absolute;
-    width: 100%;
-    left: -98px;
-    top: 20px;
-    font-weight: 700;
-    font-size: 15px;
-    text-align: center;
-    text-transform: uppercase;
-    color: sandybrown;
-    z-index: 1;
-    transition: top .5s ease;
-}
-
-.Gcontainer:hover .Gtitle {
-    top: 90px;
-}
-
-.Gbutton {
-    position: absolute;
-    width: 100%;
-    left:0;
-    top: 180px;
-    text-align: center;
-    opacity: 0;
-    transition: opacity .35s ease;
-}
-
-.Gbutton a {
-
-    width: 100%;
-    padding: 12px 48px;
-    text-align: center;
-    color: wheat;
-    border: solid 2px white;
-    z-index: 1;
-}
-
-.Gcontainer:hover .Gbutton {
-    opacity: 1;
-}
-
-
-
 /*-------------------------------------- Rooms Page Containers -----------------------------------*/
 
 #room-content{
     background-color: white;
     height: 1600px;
     width: 100%;
+    margin-top: -20px;
 }
 
 #content {
@@ -661,8 +612,6 @@ p{
     background-color: #333;
     color: white;
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-
-
 }
 /*-------------------------------------- Rooms Pages -----------------------------------*/
 
@@ -739,7 +688,7 @@ p{
 }
 .desc-part ul{
     margin-top: 70px;
-    list-style-image: url("file:///D:/GitHub/IP-project/IP%20Project/Images/check-bullet.png");
+    list-style-image: url("../Images/check-bullet.png");
 }
 .desc-part li{
     font-size: 15px;
@@ -769,6 +718,321 @@ p{
     margin-top: 80px;
 }
 
+
+/*-------------------------------------- Gallery -----------------------------------*/
+
+.white{
+    background-color: white;
+    height: 1200px;
+    width: 100%;
+    margin-top: -10px;
+}
+.Gcontainer {
+    position: relative;
+    margin-top: 50px;
+    width: 385px;
+    height: 300px;
+    margin-left: 50px;
+    float: left;
+}
+
+.Goverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #FFF;
+    background: rgba(0, 0, 0, 0);
+    transition: background 0.5s ease;
+
+
+}
+
+.Gcontainer:hover .Goverlay {
+    display: block;
+    background: rgba(0, 0, 0,0.7);
+}
+
+
+.Gimg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    border: 5px outset #2D2C2C;
+
+}
+
+.Gtitle {
+    position: absolute;
+    width: 100%;
+    left: -98px;
+    top: 20px;
+    font-weight: 700;
+    font-size: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+
+    z-index: 1;
+    transition: top .5s ease;
+    opacity: 0;
+}
+
+.Gcontainer:hover .Gtitle {
+    top: 90px;
+    opacity: 1;
+}
+
+.Gbutton {
+    position: absolute;
+    width: 100%;
+    left:0;
+    top: 180px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity .35s ease;
+}
+
+.Gbutton a {
+
+    width: 100%;
+    padding: 12px 48px;
+    text-align: center;
+    color: white;
+    border: solid 2px white;
+    z-index: 1;
+    text-decoration: none;
+}
+.Gbutton a:hover {
+    color: black;
+    background-color: white;
+}
+.Gcontainer:hover .Gbutton {
+    opacity: 1;
+
+}
+
+
+
+/*-------------------------------------- Booking -----------------------------------*/
+.Booking{
+    background-color: white;
+    height: 900px;
+    width: 100%;
+    margin-top: -20px;
+}
+form {
+
+    margin: 0 auto;
+    width: 400px;
+    margin-left: 100px;
+    margin-top: 80px;
+    padding: 1em;
+    border: 1px solid darkslateblue;
+}
+
+
+
+label {
+
+    display: inline-block;
+    font-family: Vollkorn;
+    color: black;
+    text-align: left;
+
+    color: darkslateblue;
+}
+
+input, textarea {
+    margin-left: 25px;
+    font: 1em sans-serif;
+    width: 300px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 1px solid #999;
+}
+
+input:focus, textarea:focus {
+    border-color: #000;
+}
+select{
+    margin-left: 25px;
+}
+textarea {
+    vertical-align: top;
+    height: 5em;
+    resize: vertical;
+}
+
+.button {
+    margin-left: 100px;
+}
+
+.submit {
+
+    background-color: #111;
+    color: white;
+    font-size: 15px;
+    border: 2px solid #555555;
+    border-radius: 4px;
+    height: 50px;
+    width: 100px;
+    font-family: Vollkorn;
+}
+h4{
+    color: #111111;
+    font-family: Merriweather;
+    margin-left: 30px;
+    font-size:14px;
+
+}
+.background h3{
+    color: #111111;
+    font-family: Merriweather;
+    margin-left: 30px;
+
+}
+.submit:hover {
+    background-color: white;
+    color: black;
+
+}
+
+#formside{
+    float: left;
+    width: 33%;
+}
+#Map{
+    float: left;
+    width: 50%;
+
+}
+.background{
+    width: 365px;
+    height: 550px;
+    background-color: #eee;
+    margin-left: 200px;
+    margin-top: 80px;
+
+}
+.background iframe{
+    width: 303px;
+    height: 198px;
+    margin-left: 30px;
+}
+
+/*-------------------------------------- Admin Page -----------------------------------*/
+#admin-section{
+    background-color: white;
+    height: 420px;
+    width: 100%;
+}
+
+.circular {
+  /* display items as block elements, inline positioning */
+  display: inline-block;
+  /* set the height of the image */
+  height: 200px;
+  /* hide the link text */
+  text-indent: -9999px;
+  /* set the width of the image */
+  width: 200px;
+    margin-left: 50px;
+  margin-top: 100px;
+  /* radius to make the image into a circular shape */
+  border-radius: 150px;
+    -webkit-border-radius: 150px;
+    -moz-border-radius: 150px;
+
+  /* Add shadow to the box */
+  box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+    -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+    -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+
+}
+
+/* simple hover effect */
+a.circular { 
+  opacity: .6; 
+  /* add fade transition effect to opacity change */
+  transition: opacity 0.3s ease-in-out;
+  -webkit-transition: opacity 0.3s ease-in-out; /* Safari */
+}
+
+a.circular:hover { 
+    opacity: 1; 
+}
+
+.btn-ViewHomePage {
+    background: url(../Images/home.png) no-repeat center;
+    margin-left: 180px;
+}
+.btn-AddRoom {
+    background: url(../Images/AddRoom.png) no-repeat center;
+
+}
+.btn-RemoveRoom {
+    background: url(../Images/RemoveRoom.png) no-repeat center;
+
+}
+.btn-EditRoom {
+    background: url(../Images/EditRoom.png) no-repeat center;
+
+}
+/*-------------------------------------- AddRoom  Page -----------------------------------*/
+#addroom-section{
+    background-color: white;
+    height: 800px;
+    width: 100%;
+}
+
+.Addroom-form {
+
+    margin: 0 auto;
+    width: 400px;
+    margin-left: 270px;
+    margin-top: 80px;
+    border: 0px solid darkslateblue;
+
+}
+.room-text {
+
+    display: inline-block;
+    font-family: Vollkorn;
+    color: black;
+    text-align: left;
+    font-size: 20px;
+    color: darkslateblue;
+}
+
+.room{
+    margin-left: 25px;
+    font: 1em sans-serif;
+    width: 700px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 1px solid #999;
+}
+.save-button {
+    margin-left: 625px;
+    margin-top: 20px;
+    background-color: #111;
+    color: white;
+    font-size: 15px;
+    border: 2px solid #555555;
+    border-radius: 4px;
+    height: 50px;
+    width: 100px;
+    font-family: Vollkorn;
+    float: left;
+}
+.save-button:hover {
+    background-color: white;
+    color: black;
+
+}
 /*-------------------------------------- scroll button -----------------------------------*/
 
 
@@ -779,7 +1043,7 @@ p{
     right: 30px;
     cursor: pointer;
     padding: 15px;
-    overflow: hidden;
+    overflow: hidden ;
 }
 
 

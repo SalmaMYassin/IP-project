@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	
+		<!-- Favicon -->
+	<link rel="icon" type="image/png" href="Images/Favicon.png">
+    <title>Hoteliano</title>
+
+    <link rel="stylesheet" href="Includes/Style.css">
+    <script src="Includes/jquery-3.1.1.min.js"></script>
+    <script src="Includes/script.js"></script>
+    <div id="Logo">
+    <a href="home.html">
+        <img src="Images/Logo.png" id="LogoCenter">
+</a>
+    </div>
+</head>
+<body>
+
+<img src="Images/arrow2.png"  id="myBtn">
+
+<nav id="navbar-Admin"></nav>
+
+<!-- ------------------------------------Admin front Image-------------------------------------*-->
+    <div class="slideshow-container">
+
+        <img src="Images/Add.jpg" style="width:100%">
+    </div>
+    <div id="addroom-section">
+           <form class="Addroom-form"action="/my-handling-form-page" method="post" name="Edit">
+               <div name="in1">
+                  <label class="room-text">Room Number:</label>
+                        <select class="room">
+
+                            <option value="Deluxe Room">101</option>
+                            <option value="Luxury Room">102</option>
+                            <option value="Premier Room">103</option>
+                            <option value="Deluxe Room">104</option>
+                            <option value="Luxury Room">105</option>
+                            <option value="Premier Room">106</option>
+                        </select>
+               </div>
+                  <div  name="in2">
+                    <label class="room-text">Room Type:</label>
+                        <select class="room">
+
+                            <option value="Deluxe Room">Deluxe Room</option>
+                            <option value="Luxury Room">Luxury Room</option>
+                            <option value="Premier Room">Premier Room</option>
+                            <option value="Deluxe Room">Deluxe Suite</option>
+                            <option value="Luxury Room">Luxury Suite</option>
+                            <option value="Premier Room">Premier Suite</option>
+                        </select>
+                  </div>
+                 
+                  <div  name="in3">
+                    <label class="room-text">Room Location:</label>
+                    <textarea id="msg" class="room"></textarea>
+                  </div>
+                 
+                 <div name="in4">
+                    <label class="room-text">Room Description:</label>
+                    <textarea id="msg" class="room"></textarea>
+                  </div>
+                 
+                 <div  name="in5">
+                    <label class="room-text">Room Availability:</label>
+                    <textarea id="msg" class="room"></textarea>
+                  </div>
+
+
+
+
+                        <a  >
+                        <button class="save-button" type="submit" onclick="JSON()">Save</button>
+                        </a>                                   <a  >
+                        <button class="save-button" type="submit">Cancel</button>
+                        </a>
+
+
+            </form>
+    </div>
+
+
+<!-- ------------------------------------Footer-------------------------------------*-->
+
+    <div id="Footer-frame"></div>
+
+</body>
+</html>
