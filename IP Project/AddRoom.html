@@ -30,15 +30,15 @@
         <img src="Images/Add.jpg" style="width:100%;">
     </div>
     <div id="addroom-section" >
-           <form class="Addroom-form" action = "/my-handling-form-page" method="post" style="margin-top: 0px;" name="add">
-                  <div name="in1">
+           <form class="Addroom-form" action = "Rooms.php" method="post" style="margin-top: 0px;" name="add">
+                  <div>
                     <label class="room-text">Room Number:</label>
-                    <input type="text"  class="room">
+                    <input name="in1" type="text"  class="room">
                   </div>
 
-                  <div name="in2">
+                  <div>
                     <label class="room-text">Room Type:</label>
-                        <select class="room">
+                        <select  name="in2" class="room">
 
                             <option value="Deluxe Room">Deluxe Room</option>
                             <option value="Luxury Room">Luxury Room</option>
@@ -49,29 +49,31 @@
                         </select>
                   </div>
                  
-                  <div name="in3">
+                  <div >
                     <label class="room-text">Room Location:</label>
-                    <textarea id="msg" class="room"></textarea>
+                    <textarea name="in3" id="msg" class="room"></textarea>
                   </div>
                  
-                 <div name="in4">
+                 <div>
                     <label class="room-text">Room Description:</label>
-                    <textarea id="msg" class="room"></textarea>
+                    <textarea  name="in4" id="msg" class="room"></textarea>
                   </div>
                  
-                 <div name="in5">
+                 <div>
                     <label class="room-text">Room Availability:</label>
-                    <textarea id="msg" class="room"></textarea>
+                    <textarea name="in5" id="msg" class="room"></textarea>
                   </div>
-
+                  <div>
+                       <label class="room-text">Room Price:</label>
+                       <input name="in6" type="text"  class="room">
+                     </div>
 
 
 
                         <a>
-                        <button class="save-button" type="submit" onclick="JSON()">Save</button>
-                        </a>                                   <a  >
-                        <button class="save-button" type="submit">Cancel</button>
+                        <button name="submit" class="save-button" type="submit" onclick="JSON()">Save</button>
                         </a>
+
 
 
             </form>

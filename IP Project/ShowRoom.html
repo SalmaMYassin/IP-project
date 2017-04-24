@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="Images/Favicon.png">
+    <title>Hoteliano</title>
+
+    <link rel="stylesheet" href="Includes/Style.css">
+    <script src="Includes/jquery-3.1.1.min.js"></script>
+    <script src="Includes/script.js"></script>
+    <div id="Logo">
+        <a href="home.html">
+            <img src="Images/Logo.png" id="LogoCenter">
+        </a>
+    </div>
+</head>
+<body>
+
+<img src="Images/arrow2.png"  id="myBtn">
+
+<nav id="navbar-Admin"></nav>
+
+<!-- ------------------------------------Admin front Image-------------------------------------*-->
+<div class="slideshow-container">
+
+    <img src="Images/Add.jpg" style="width:100%">
+</div>
+<div id="addroom-section">
+    <form class="Addroom-form"action="Rooms.php" method="post" name="Edit">
+        <div>
+                <label class="room-text">Room Number:</label>
+                <input name="in1" type="text"  class="room">
+              </div>
+         
+        <a>
+            <button formaction="ShowRoom2.php" name="showsubmit" class="save-button" type="submit" onclick="JSON()">Show Room Details</button>
+        </a>
+
+        <a>
+            <button name="Print" class="save-button" type="submit" onclick="JSON()">Print</button>
+        </a>
+    </form>
+
+
+
+</div>
+<div>
+
+
+<!-- ------------------------------------Footer-------------------------------------*-->
+
+<div id="Footer-frame"></div>
+
+</body>
+</html>

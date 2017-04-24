@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoteliano</title>
+    <link rel="icon" type="image/png" href="Images/Favicon.png">
+    <link rel="stylesheet"href="Includes/Style.css">
+    <script src="Includes/jquery-3.1.1.min.js"></script>
+    <script src="Includes/script.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+    <div id="Logo">
+        <img src="Images/Logo.png" id="LogoCenter">
+
+    </div>
+</head>
+<body>
+
+<img src="Images/arrow2.png"  id="myBtn">
+
+<!-- ------------------------------------page division-------------------------------------*-->
+<div class="Booking">
+
+    <div id="formside">
+        <form action="AdminLogin.php" method="post" name="a">
+              <div>
+                <label>Name:</label>
+                <input type="text" name="user" id="user"  required>
+              </div>
+
+              <div>
+                <label>Password:</label>
+                <input name="pass" id="pass"  type="password" required>
+              </div>
+
+
+              <div class="button">
+                <button class="submit" onclick="validateForm(); JSON();" type="submit"> Login </button>
+              </div>
+        </form>
+
+    </div>
+</div>
+
+
+
+</body>
+</html>

@@ -30,22 +30,14 @@
         <img src="Images/Add.jpg" style="width:100%">
     </div>
     <div id="addroom-section">
-           <form class="Addroom-form"action="/my-handling-form-page" method="post" name="Edit">
-               <div name="in1">
-                  <label class="room-text">Room Number:</label>
-                        <select class="room">
-
-                            <option value="Deluxe Room">101</option>
-                            <option value="Luxury Room">102</option>
-                            <option value="Premier Room">103</option>
-                            <option value="Deluxe Room">104</option>
-                            <option value="Luxury Room">105</option>
-                            <option value="Premier Room">106</option>
-                        </select>
-               </div>
-                  <div  name="in2">
+           <form class="Addroom-form"action="Rooms.php" method="post" name="Edit">
+               <div>
+                       <label class="room-text">Room Number:</label>
+                       <input name="in1" type="text"  class="room">
+                     </div>
+                  <div>
                     <label class="room-text">Room Type:</label>
-                        <select class="room">
+                        <select name="in2" class="room">
 
                             <option value="Deluxe Room">Deluxe Room</option>
                             <option value="Luxury Room">Luxury Room</option>
@@ -56,30 +48,30 @@
                         </select>
                   </div>
                  
-                  <div  name="in3">
+                  <div>
                     <label class="room-text">Room Location:</label>
-                    <textarea id="msg" class="room"></textarea>
+                    <textarea name="in3" id="msg" class="room"></textarea>
                   </div>
                  
-                 <div name="in4">
+                 <div>
                     <label class="room-text">Room Description:</label>
-                    <textarea id="msg" class="room"></textarea>
+                    <textarea name="in4" id="msg" class="room"></textarea>
                   </div>
                  
-                 <div  name="in5">
+                 <div>
                     <label class="room-text">Room Availability:</label>
-                    <textarea id="msg" class="room"></textarea>
+                    <textarea  name="in5" id="msg" class="room"></textarea>
                   </div>
+                  <div>
+                       <label class="room-text">Room Price:</label>
+                       <input name="in6" type="text"  class="room">
+                     </div>
 
 
 
-
-                        <a  >
-                        <button class="save-button" type="submit" onclick="JSON()">Save</button>
-                        </a>                                   <a  >
-                        <button class="save-button" type="submit">Cancel</button>
+                        <a>
+                        <button name="editsubmit" class="save-button" type="submit" onclick="JSON()">Save</button>
                         </a>
-
 
             </form>
     </div>

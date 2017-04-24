@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoteliano</title>
+    <link rel="icon" type="image/png" href="Images/Favicon.png">
+    <link rel="stylesheet"href="Includes/Style.css">
+    <script src="Includes/jquery-3.1.1.min.js"></script>
+    <script src="Includes/script.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+    <div id="Logo">
+        <img src="Images/Logo.png" id="LogoCenter">
+
+    </div>
+</head>
+<body>
+
+<img src="Images/arrow2.png"  id="myBtn">
+
+<nav id="navbar-frame"></nav>
+
+<!-- ---------------------------------------------  Slider  --------------------------------------------->
+
+<div class="slideshow-container" id="slide">
+
+    <img src="Images/booking.jpg" style="width:100%">
+    <div class="text">Edit Your Reservation</div>
+    <div class="text2">BOOKING</div>
+
+
+
+</div>
+<!-- ------------------------------------page division-------------------------------------*-->
+<div class="Booking">
+    <div id="formside">
+        <form action="Booking.php" method="post" name="a">
+            <div>
+                    <label>Reservation ID:</label>
+                    <input type="text" name="in0" id="ID" required>
+                  </div>
+              <div>
+                <label>New Name:</label>
+                <input type="text" name="in1" id="name" name="user_name" required>
+              </div>
+
+              <div>
+                <label>New E-mail:</label>
+                <input name="in2" id="email" name="user_email" required>
+              </div>
+              <div>
+
+            <label> &nbsp; &nbsp; &nbsp; &nbsp;New Check In Date:</label>
+            <input type="date" name="in3" name="arrival" required>
+        </div>
+
+            <div>
+                <br>
+                <label> &nbsp; &nbsp; &nbsp; &nbsp;New Check Out Date:</label>
+                <input type="date" name="in4" name="departure" required>
+            </div>
+            <div >
+                <br><label >  &nbsp; &nbsp; &nbsp;  &nbsp;New Number of Guests:</label>
+                <input  name="in5" id="Numofg"  required>
+            </div>
+            <div >
+                <br><label> &nbsp; &nbsp; &nbsp;  &nbsp;New Room Type:</label>
+                <select name="in6">
+
+                    <option  value="Deluxe Room">Deluxe Room</option>
+                    <option  value="Luxury Room">Luxury Room</option>
+                    <option  value="Premier Room">Premier Room</option>
+                    <option  value="Deluxe Room">Deluxe Suite</option>
+                    <option  value="Luxury Room">Luxury Suite</option>
+                    <option  value="Premier Room">Premier Suite</option>
+                </select>
+            </div>
+              <div >
+                <label>Message:</label>
+                <textarea name="in7" id="msg" name="user_message" ></textarea>
+              </div>
+
+              <div class="button">
+                <button name="editsubmit" class="submit" onclick="validateForm(); JSON();" type="submit">Submit</button>
+              </div>
+        </form>
+
+    </div>
+
+
+</div>
+
+<!-- ------------------------------------Footer-------------------------------------*-->
+
+
+<div id="Footer-frame"></div>
+
+</body>
+</html>

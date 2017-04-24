@@ -30,29 +30,17 @@
         <img src="Images/Add.jpg" style="width:100%">
     </div>
     <div id="addroom-section">
-           <form class="Addroom-form"action="/my-handling-form-page" method="post">
-
-
-                  <div>
-                    <label class="room-text">Room Number:</label>
-                        <select class="room">
-
-                            <option value="Deluxe Room">101</option>
-                            <option value="Luxury Room">102</option>
-                            <option value="Premier Room">103</option>
-                            <option value="Deluxe Room">104</option>
-                            <option value="Luxury Room">105</option>
-                            <option value="Premier Room">106</option>
-                        </select>
-
-                        <a  >
-                        <button class="save-button" type="submit">Save</button>
+           <form class="Addroom-form"action="Rooms.php" method="post">
+ 
+                   <div>
+                   <label class="room-text">Room Number:</label>
+                   <input name="in1" type="text"  class="room">
+                 </div>
+                        <a>
+                        <button name="deletesubmit" class="save-button" type="submit">Remove</button>
                         </a>
-                        </div>
-                                                <a  >
-                        <button class="save-button" type="submit">Cancel</button>
-                        </a>
-                        </div>
+
+
 
             </form>
     </div>

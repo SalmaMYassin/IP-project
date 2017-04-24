@@ -56,9 +56,9 @@ $(document).ready(function() {
     var scrollTop = $(window).scrollTop();
 
     if (scrollTop > stickyNavTop) { 
-      $("#navbar-frame, #navbar-Admin").addClass('sticky');
+      $("nav").addClass('sticky');
     } else {
-      $("#navbar-frame, #navbar-Admin").removeClass('sticky');
+      $("nav").removeClass('sticky');
     }
   };
 
